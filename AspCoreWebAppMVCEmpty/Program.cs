@@ -7,7 +7,7 @@ var app = builder.Build();
 
 app.MapControllerRoute(
     name:"Defualt",
-    pattern:"{controller=Home}/{action=Index}/{id?}");
+    pattern:"{controller=Home}/{action=About}/{id?}");
 
 //app.MapGet("/", () => "Hello World!");
 
