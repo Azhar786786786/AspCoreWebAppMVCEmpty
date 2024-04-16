@@ -1,4 +1,5 @@
 var builder = WebApplication.CreateBuilder(args);
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
@@ -6,8 +7,10 @@ var app = builder.Build();
 //app.MapDefaultControllerRoute();
 
 app.MapControllerRoute(
-    name:"Defualt",
-    pattern:"{controller=Home}/{action=About}/{id?}");
+    name: "Defualt",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.MapControllers();
 
 //app.MapGet("/", () => "Hello World!");
 
